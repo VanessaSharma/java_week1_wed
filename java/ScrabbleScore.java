@@ -10,11 +10,18 @@ public class ScrabbleScore {
     String letterList = "aeioulnrstdgbcmpfhvwykjxqz";
     Integer[] valueOfLetters = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 8, 8, 10, 10};
 
-
     System.out.println( "What is your word?");
     String userAnswer = myConsole.readLine();
-    String[] userLetters = userAnswer.split(" ");
+    char[] letters = userAnswer.toCharArray();
 
-    System.out.println( userLetters);
+    int totalScore = 0;
+    for (int letters : letterList) {
+      totalScore += valueOfLetters[letterList.indexOf(letters)];
+    }
+
+  //  char[] userLetters = userAnswer.toCharArray();
+
+
+
 }
 }
